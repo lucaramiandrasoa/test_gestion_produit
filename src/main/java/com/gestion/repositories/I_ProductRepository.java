@@ -5,5 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.gestion.models.Product;
 
 public interface I_ProductRepository extends MongoRepository<Product, String>{
-	
+//	List<Product> findByPublished(boolean published);
+	List<Product> findByNameContaining(String name);
 }
